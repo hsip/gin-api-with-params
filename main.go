@@ -34,6 +34,25 @@ func main() {
 		v1.POST("/user/post/common", api.GetUserCommon)
 	}
 
+	v2 := router.Group("/v2")
+	{
+		v2.GET("/user/format/i/:id", api.GetFormatInt)
+		v2.GET("/user/format/int", api.GetFormatInt)
+		v2.POST("/user/format/int", api.GetFormatInt)
+		v2.GET("/user/format/i64/:id", api.GetFormatInt64)
+		v2.GET("/user/format/int64", api.GetFormatInt64)
+		v2.POST("/user/format/int64", api.GetFormatInt64)
+
+		v2.POST("/user/format/int642", api.GetFormatInt64Again)
+
+		v2.GET("/user/format/s/:nick", api.GetFormatString)
+		v2.GET("/user/format/string", api.GetFormatString)
+		v2.POST("/user/format/string", api.GetFormatString)
+
+		v2.GET("/user/format/bind", api.GetBindInt64)
+		v2.POST("/user/format/bind", api.GetBindInt64)
+		v2.POST("/user/format/json", api.GetBindInt64JSON)
+	}
 	srv := &http.Server{
 		Addr:         ":80",
 		Handler:      router,
