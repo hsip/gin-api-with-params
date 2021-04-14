@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	gingerCommon "code.byted.org/dfic/ginger/common"
-	"code.byted.org/hsipeng/ginapi/common"
 	"github.com/gin-gonic/gin"
+	"loveraw.club/hsipeng/ginapi/common"
 )
 
 /// 冒号:加上一个参数名组成路由参数。可以使用c.Params的方法读取其值
@@ -53,7 +52,7 @@ type BindingParamsInt struct {
 
 func GetBindInt64(c *gin.Context) {
 	var params BindingParamsInt
-	err := gingerCommon.Bind(c, &params)
+	err := c.ShouldBind(&params)
 
 	if err != nil {
 		fmt.Println("err:", err)

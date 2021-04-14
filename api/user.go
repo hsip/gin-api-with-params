@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"code.byted.org/hsipeng/ginapi/model"
+	"loveraw.club/hsipeng/ginapi/model"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"

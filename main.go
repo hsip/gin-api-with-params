@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"time"
 
-	"code.byted.org/hsipeng/ginapi/api"
-	"code.byted.org/hsipeng/ginapi/handler"
 	"github.com/gin-gonic/gin"
+	"loveraw.club/hsipeng/ginapi/api"
+	"loveraw.club/hsipeng/ginapi/handler"
 )
 
 func main() {

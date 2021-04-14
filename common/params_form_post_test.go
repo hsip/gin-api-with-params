@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"testing"
 
-	"code.byted.org/hsipeng/ginapi/common"
-	"code.byted.org/hsipeng/ginapi/test"
 	"github.com/gin-gonic/gin"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/stretchr/testify/assert"
+	"loveraw.club/hsipeng/ginapi/common"
+	"loveraw.club/hsipeng/ginapi/test"
 )
 
 type example struct {
